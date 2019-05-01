@@ -1,3 +1,3 @@
 # clickgame
 
-For this assignment, you'll create a memory game with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+This application is a memory game with React quizing the user on the knowledge of world country flags. The assignment required breaking the application's UI into components, managing component state, and responding to user events.
