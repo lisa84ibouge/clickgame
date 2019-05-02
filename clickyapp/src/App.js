@@ -16,7 +16,7 @@ export default function (App) {
   }, [])
 
   const handleClick = (id) => 
-    setFlipped([ ...flipped, id])
+    setFlipped([ ... flipped, id])
 
   
   
