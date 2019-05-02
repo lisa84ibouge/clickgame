@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './styles.css'
 
 import Card from '../card'
 
-export default function Board({ cards, flipped, handleClick}) {
+export default function Board({ disabled, dimension, cards, flipped, solved, handleClick}) {
     return (<div className="board">
         {cards.map((card) =>( 
             
@@ -11,10 +12,13 @@ export default function Board({ cards, flipped, handleClick}) {
     key = {card.id}
     id={card.id}
     type={card.type}
-    width={card.width}
-    height={card.height}
+    width={dimension / 4.5 }
+    height={dimension / 4.5 }
     flipped={flipped.includes(card.id)}
-    handleClick={() => handleClick(card.id)}
+    solved={solved.includes(card.id)}
+    handleClick={handleClick}
+    disabled={disabled || solved.includes(card.id)}
+
     />))
         }
     </div>
@@ -22,8 +26,11 @@ export default function Board({ cards, flipped, handleClick}) {
 }
 
 Board.propTypes = {
+    disabled: PropTypes.bool.isRequired,
+    dimension: PropTypes.number.isRequired,
     cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     flipped: PropTypes.arrayOf(PropTypes.number).isRequired,
+    solved: PropTypes.arrayOf(PropTypes.number).isRequired,
     handleClick: PropTypes.func.isRequired,
 
 }
