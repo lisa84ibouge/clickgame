@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-
+//import images from './images'
 import './styles.css'
 
 
@@ -10,6 +10,7 @@ export default function Card({
     id,
     type,
     flipped,
+    solved,
     height,
     width, 
     disabled
@@ -31,7 +32,7 @@ export default function Card({
             () => disabled ? null : handleClick(id)
         } >
         <div 
-        className = "flipper" >
+        className = "flipped" >
         <img style = {
             {
                 height,
@@ -42,7 +43,7 @@ export default function Card({
             flipped ? 'front' : 'back'
         }
         src = {
-            flipped || solved ? `/img/${type}.png` : `/img/back.png`
+            flipped || solved ? `https://via.placeholder.com/150` : `/img/back.png`
         }
         /> </div>  </div>
     )

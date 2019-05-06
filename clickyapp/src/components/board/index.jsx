@@ -5,11 +5,11 @@ import './styles.css'
 import Card from '../card'
 
 export default function Board({ disabled, dimension, cards, flipped, solved, handleClick}) {
-    return (<div className="board">
-        {cards.map((card) =>( 
+    return (<div className="Board">
+        {cards.map((card, i) =>( 
             
      <Card
-    key = {card.id}
+    key = {i}
     id={card.id}
     type={card.type}
     width={dimension / 4.5 }

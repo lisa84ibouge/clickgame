@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import images from "../images.js"
 
 class Game extends React.component {
@@ -18,3 +18,5 @@ class Game extends React.component {
   }
   
   export default Game;
+
+  */
