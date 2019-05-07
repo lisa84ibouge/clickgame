@@ -37,11 +37,11 @@ console.log('type:', type);
                 width
             }
         }
-        className = {
+            className = {
             flipped ? 'front' : 'back'
         }
         src = {
-            flipped || solved ? `${type.image}` : `/img/back.png`
+            flipped || solved ? `${type.image}` : `/img/back.jpg`
         }
         /> </div>  </div>
     )

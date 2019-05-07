@@ -5,8 +5,8 @@ function shuffle(array) {
         let temp = _array[i]
         _array[i] = _array[randomIndex]
         _array[randomIndex] = temp
-        _array[i] = _array[randomIndex]
-        _array[randomIndex] = temp
+//        _array[i] = _array[randomIndex]
+//        _array[randomIndex] = temp
     }
 
     return _array
@@ -28,6 +28,9 @@ console.log('flags:', flags);
         })
         return acc
     }, [])
-    
-    return shuffle(cards)
+    var shuffled_cards = shuffle(cards);
+    console.log('cards:', shuffled_cards);
+    return shuffled_cards;
+
+//    return shuffle(cards)
 }
