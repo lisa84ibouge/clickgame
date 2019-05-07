@@ -9,12 +9,12 @@ import Game from "./components/Game";
 import Card from './components/card'
 import Board from './components/board'
 //import images from '.images/'
-
+import { countryFlags } from '../src/images'
 import initializeDeck from "./deck"
 
 
 export default function (App) {
-  const [cards, setCards] = useState([])
+  const [cards, setCards] = useState(countryFlags)
   const [flipped, setFlipped] = useState([])
   const [dimension, setDimension] = useState(400)
   const [solved, setSolved] = useState([])
@@ -22,10 +22,11 @@ export default function (App) {
 
   useEffect(() => {
     resizeBoard()
-    setCards(initializeDeck())
+    setCards(initializeDeck(countryFlags))
   }, [])
 
   useEffect(() => {
+    
     preloadImages()
   }, cards)
 
@@ -54,9 +55,10 @@ export default function (App) {
   }
 
   const preloadImages = () => {
+    console.log("Card: ", cards)
     cards.map((card) => {
 
-      const src = `/img/${card.type}.png`
+      const src = `${card.image}`
       console.log(src)
       new Image().src = src
     })

@@ -12,10 +12,10 @@ function shuffle(array) {
     return _array
 }
 
-export default function initializeDeck() {
-
+export default function initializeDeck(flags) {
+console.log('flags:', flags);
     let id = 0
-    const cards = ['react', 'reactu', 'redux', 'vue', 'angular', 'javascript', 'ruby', 'rails']
+    const cards = flags
     .reduce((acc, type) => {
         acc.push({
             id: id++, 

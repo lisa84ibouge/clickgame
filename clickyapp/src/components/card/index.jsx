@@ -15,9 +15,7 @@ export default function Card({
     width, 
     disabled
 }) {
-
-
-
+console.log('type:', type);
     return ( 
         <div 
         className = {`flip-container ${flipped ? 'flipped' : ''} `
@@ -43,7 +41,7 @@ export default function Card({
             flipped ? 'front' : 'back'
         }
         src = {
-            flipped || solved ? `https://via.placeholder.com/150` : `/img/back.png`
+            flipped || solved ? `${type.image}` : `/img/back.png`
         }
         /> </div>  </div>
     )

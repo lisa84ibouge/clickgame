@@ -1,4 +1,4 @@
-/*[
+export const countryFlags = [
     {
       "id": 1,
       "name": "Afghanistan",
@@ -40,5 +40,6 @@
       "image": "https://www.countries-ofthe-world.com/flags-normal/flag-of-Armenia.png"
     }
    ]
-   */
+   
+   
    
