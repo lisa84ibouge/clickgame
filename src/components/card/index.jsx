@@ -41,7 +41,7 @@ console.log('type:', type);
             flipped ? 'front' : 'back'
         }
         src = {
-            flipped || solved ? `${type.image}` : `/img/back.jpg`
+            flipped || solved ? `${type.image}` : `img/back.jpg`
         }
         /> </div>  </div>
     )
